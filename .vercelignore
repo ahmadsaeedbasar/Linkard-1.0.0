@@ -1,9 +1,0 @@
-.git/
-node_modules/
-.firebase/
-.vscode/
-.env*
-*.log
-*.zip
-*.mp4
-*.psd
