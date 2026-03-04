@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 25% 94%;
+    --foreground: 172 100% 50%;
+
+    --card: 217 25% 94%;
+    --card-foreground: 172 100% 45%;
+
+    --popover: 217 25% 94%;
+    --popover-foreground: 172 100% 45%;
+
+    --primary: 217 25% 94%;
+    --primary-foreground: 172 100% 40%;
+
+    --secondary: 217 25% 94%;
+    --secondary-foreground: 172 100% 45%;
+
+    --muted: 217 25% 94%;
+    --muted-foreground: 172 100% 35%;
+
+    --accent: 217 25% 94%;
+    --accent-foreground: 172 100% 40%;
+
+    --destructive: 11 89% 50%;
+    --destructive-foreground: 172 100% 50%;
+
+    --border: 217 25% 94%;
+    --input: 217 25% 94%;
+    --ring: 172 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 217 25% 94%;
+    --sidebar-foreground: 172 100% 50%;
+    --sidebar-primary: 172 100% 45%;
+    --sidebar-primary-foreground: 217 25% 94%;
+    --sidebar-accent: 172 100% 40%;
+    --sidebar-accent-foreground: 217 25% 94%;
+    --sidebar-border: 217 25% 94%;
+    --sidebar-ring: 172 100% 50%;
+  }
+
+  .dark {
+    --background: 216 33% 6%;
+    --foreground: 172 100% 60%;
+
+    --card: 224 26% 18%;
+    --card-foreground: 172 100% 55%;
+
+    --popover: 224 26% 18%;
+    --popover-foreground: 172 100% 55%;
+
+    --primary: 172 100% 60%;
+    --primary-foreground: 224 26% 18%;
+
+    --secondary: 224 26% 18%;
+    --secondary-foreground: 172 100% 50%;
+
+    --muted: 224 26% 18%;
+    --muted-foreground: 172 100% 40%;
+
+    --accent: 172 100% 60%;
+    --accent-foreground: 224 26% 18%;
+
+    --destructive: 11 89% 50%;
+    --destructive-foreground: 224 26% 18%;
+
+    --border: 224 26% 18%;
+    --input: 224 26% 18%;
+    --ring: 172 100% 55%;
+
+    --sidebar-background: 216 33% 6%;
+    --sidebar-foreground: 172 100% 60%;
+    --sidebar-primary: 224 26% 18%;
+    --sidebar-primary-foreground: 172 100% 55%;
+    --sidebar-accent: 172 100% 50%;
+    --sidebar-accent-foreground: 224 26% 18%;
+    --sidebar-border: 224 26% 18%;
+    --sidebar-ring: 172 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    user-select: none;
+    cursor: grab;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fs-2 {
+    font-size: 2rem;
+  }
+
+  /* Platform Gradients */
+  .platform-x {
+      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  }
+
+  .platform-instagram {
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  }
+
+  .platform-linkedin {
+      background: linear-gradient(135deg, #0077b5 0%, #0a66c2 100%);
+  }
+
+  .platform-youtube {
+      background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  }
+
+  .platform-tiktok {
+      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  }
+
+  .platform-facebook {
+      background: linear-gradient(135deg, #1877f2 0%, #0d5cb6 100%);
+  }
+
+  .platform-threads {
+      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  }
+
+  .platform-other {
+      background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+  }
+
+  .avatar-outline {
+      box-shadow: 0 0 0 4px #fff;
+  }
+
+  /* Infinite Animation */
+  @keyframes scroll {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(-50%);
+      }
+  }
+
+  .animate-scroll {
+      animation: scroll 35s linear infinite;
+  }
+
+  .animate-scroll:hover {
+      animation-play-state: paused;
+  }
+}
+
